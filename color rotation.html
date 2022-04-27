@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        --angle: 0deg;
+        width: 50vmin;
+        height: 50vmin;
+        border: 10vmin solid;
+        border-image: conic-gradient(from var(--angle), red, yellow, lime, aqua, blue, magenta, red) 1;
+        
+        animation: 10s rotate linear infinite;
+      }
+      
+      @keyframes rotate {
+        to {
+          --angle: 360deg;
+        }
+      }
+      
+      @property --angle {
+        syntax: '<angle>';
+        initial-value: 0deg;
+        inherits: false;
+      }
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      input[type="checkbox"] {
+        position: fixed;
+        top: 1em;
+        left: 1em;
+      }
+      
+      input[type="checkbox"]:after {
+        content: 'Toggle Fill';
+        white-space: nowrap;
+        padding-left: 1.5em;
+      }
+      
+      input[type="checkbox"]:checked + div {
+        border-image-slice: 1 fill;
+      }
+      
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        width: 100vw;
+        display: grid;
+        place-items: center;
+        background: #fff;
+      }
+      
+      footer {
+        text-align: center;
+        font-style: italic;
+      }
+</style>
+
+<body>
+    <input type="checkbox" />
+<div></div>
+
+<footer>
+</footer>
+<!-- <iframe width="1366" height="768" src="https://www.youtube.com/embed/r4RQ38EoLds" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+</body>
+</html>
